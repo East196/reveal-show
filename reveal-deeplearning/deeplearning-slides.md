@@ -465,31 +465,38 @@ label = "文青的神经网络" ;
 <!-- slide -->
 ## CNN
 卷积神经网络
-
+![CNN](../assets/CNNArchitecture.jpg)
+原理：手电筒一块一块过
 <!-- slide vertical=true-->
 ### CNN？
 应用：图片识别
-手电筒
+
 
 
 <!-- slide -->
 ## RNN
+循环神经网络
+![RNN](../assets/RNN-unrolled.png)
+原理：状态记忆
 <!-- slide vertical=true-->
-### RNN
-传统RNN
 ### LTSM
+![LTSM](../assets/LSTM3-chain.png)
+原理：三重门
+<!-- slide vertical=true-->
+应用
+
 
 <!-- slide -->
 ## GAN
-
+![GAN](../assets/gan.png)
 <!-- slide vertical=true-->
 ### DCGAN
 
 
 <!-- slide -->
 ## 学习顺序
-- 一本入门书：简单易懂
-- 一本经典书：全面严谨
+- 入门：简单易懂
+- 经典：全面严谨
 - Blog
 - Github
 - 论文
@@ -500,14 +507,26 @@ label = "文青的神经网络" ;
 }
  ```
 <!-- slide vertical=true-->
-# 学习资料
-[网易云课堂的深度学习微专业by吴恩达]()
+### 视频
+- [Tensorflow教程 by 莫烦](https://www.bilibili.com/video/av16001891/)
+- [网易云课堂的深度学习微专业 by 吴恩达](http://mooc.study.163.com/smartSpec/detail/1001319001.htm)
 
-<!-- slide -->
+<!-- slide vertical=true-->
+### 书籍
+#### 实战类
+没错，随便买，反正你会去Github上下代码的~~~
+#### 专业类
+- [《白话深度学习与Tensorflow》](https://item.jd.com/12228460.html) by 高扬、卫峥
+- [《深度学习》](https://item.jd.com/12128543.html) by Ian Goodfellow、Yoshua Bengio 和 Aaron Courville
+[电子版](https://github.com/exacity/deeplearningbook-chinese/releases/download/v0.5-beta/dlbook_cn_v0.5-beta.pdf)
+
+#### 科普类
+- [《终极算法》](https://item.jd.com/12079958.html) by Pedro Domingos
 
 
- - <p style="color: #fff;">感谢三巨头！</p> <!-- .element: class="fragment" data-fragment-index="3" -->
- - <p style="color: #fff;">感谢吴大叔！</p> <!-- .element: class="fragment" data-fragment-index="2" -->
- - <p style="color: #fff;">感谢吴小哥！</p> <!-- .element: class="fragment" data-fragment-index="1" -->
+<!-- slide data-background-image="https://i.loli.net/2017/07/12/5965b7edd3a2a.jpeg" -->
+ - <p style="color: #fff;">感谢Ian Goodfellow、Yoshua Bengio 和 Aaron Courville三巨头！</p> <!-- .element: class="fragment" data-fragment-index="3" -->
+ - <p style="color: #fff;">感谢吴恩达怪大叔！</p> <!-- .element: class="fragment" data-fragment-index="2" -->
+ - <p style="color: #fff;">感谢吴沫凡小哥哥！</p> <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <!-- slide data-background-image="../assets/thankyou.jpg" data-transition="zoom" -->
