@@ -272,7 +272,7 @@ NO！
 
 <!-- slide -->
 NN打油诗
-    - 郑东
+    - East196
 
 机器性能大提升，
 海量数据在产生。
@@ -466,11 +466,18 @@ label = "文青的神经网络" ;
 ## CNN
 卷积神经网络
 ![CNN](assets/CNNArchitecture.jpg)
-原理：手电筒一块一块过
 <!-- slide vertical=true-->
-### CNN？
-应用：图片识别
+卷积：手电筒一块一块过
+![手电筒](assets/cnn.jpg)
 
+<!-- slide vertical=true-->
+池化：近视眼心更宽
+![近视眼](assets/pool.jpg)
+
+<!-- slide vertical=true-->
+### CNN应用
+![手写识别](assets/MINST.png)
+![猫狗分类](assets/catdog.jpg)
 
 
 <!-- slide -->
@@ -483,15 +490,21 @@ label = "文青的神经网络" ;
 ![LTSM](assets/LSTM3-chain.png)
 原理：三重门
 <!-- slide vertical=true-->
-应用
+### RNN应用
+#### 机器翻译
+![机器翻译](assets/rnn1.png)
 
+<!-- slide vertical=true-->
+####  语音识别
+![语音识别](assets/rnn2.jpg)
 
 <!-- slide -->
 ## GAN
 ![GAN](assets/gan.png)
 <!-- slide vertical=true-->
-### DCGAN
-
+### GAN应用
+#### DCGAN生成女朋友
+![DCGAN生成女朋友](assets/girl.jpg)
 
 <!-- slide -->
 ## 学习顺序
@@ -530,3 +543,5 @@ label = "文青的神经网络" ;
  - <p style="color: #fff;">感谢吴沫凡小哥哥！</p> <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <!-- slide data-background-image="assets/thankyou.jpg" data-transition="zoom" -->
+
+<!-- slide vertical=true data-background-image="深度学习入门.png"-->
