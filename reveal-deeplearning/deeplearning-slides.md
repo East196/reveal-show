@@ -8,7 +8,7 @@ presentation:
 
 <!-- slide -->
 # 深度学习入门
-> 郑东
+> East196
 
 [GitHub](http://github.com/east196)
 
@@ -78,7 +78,7 @@ $2 = 10w+ b$
 $4 = 3w+b$
 
 怎么解？：）
-<!-- slide data-background-image="../assets/sklearn.jpg" vertical=true -->
+<!-- slide data-background-image="assets/sklearn.jpg" vertical=true -->
 
 
 <!-- slide vertical=true-->
@@ -142,7 +142,7 @@ plt.show()
 分类，回归，聚类
 scikit-learn
 
-<!-- slide data-background-image="../assets/sklearn.jpg" vertical=true -->
+<!-- slide data-background-image="assets/sklearn.jpg" vertical=true -->
 
 
 <!-- slide vertical=true-->
@@ -465,7 +465,7 @@ label = "文青的神经网络" ;
 <!-- slide -->
 ## CNN
 卷积神经网络
-![CNN](../assets/CNNArchitecture.jpg)
+![CNN](assets/CNNArchitecture.jpg)
 原理：手电筒一块一块过
 <!-- slide vertical=true-->
 ### CNN？
@@ -476,11 +476,11 @@ label = "文青的神经网络" ;
 <!-- slide -->
 ## RNN
 循环神经网络
-![RNN](../assets/RNN-unrolled.png)
+![RNN](assets/RNN-unrolled.png)
 原理：状态记忆
 <!-- slide vertical=true-->
 ### LTSM
-![LTSM](../assets/LSTM3-chain.png)
+![LTSM](assets/LSTM3-chain.png)
 原理：三重门
 <!-- slide vertical=true-->
 应用
@@ -488,7 +488,7 @@ label = "文青的神经网络" ;
 
 <!-- slide -->
 ## GAN
-![GAN](../assets/gan.png)
+![GAN](assets/gan.png)
 <!-- slide vertical=true-->
 ### DCGAN
 
@@ -529,4 +529,4 @@ label = "文青的神经网络" ;
  - <p style="color: #fff;">感谢吴恩达怪大叔！</p> <!-- .element: class="fragment" data-fragment-index="2" -->
  - <p style="color: #fff;">感谢吴沫凡小哥哥！</p> <!-- .element: class="fragment" data-fragment-index="1" -->
 
-<!-- slide data-background-image="../assets/thankyou.jpg" data-transition="zoom" -->
+<!-- slide data-background-image="assets/thankyou.jpg" data-transition="zoom" -->
