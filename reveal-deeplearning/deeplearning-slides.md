@@ -10,7 +10,7 @@ presentation:
 # 深度学习入门
 > East196
 
-[GitHub](http://github.com/east196)
+[GitHub：http://github.com/east196](http://github.com/east196)
 
 <!-- slide -->
 ## 深度学习
@@ -32,11 +32,13 @@ digraph d3 {
 <!-- slide vertical=true-->
 ### Why？
 简单粗暴效果好！
-能跑出来了：
-越来越大的数据
-越来越快的电脑
-越来越多的优化技巧
-能解决新的问题：
+#### 1. 能Work
+- 越来越大的数据
+- 越来越快的电脑
+- 越来越多的优化技巧
+
+#### 2. 能解决问题
+
 越来越多的Neural Network模型
 
 <!-- slide vertical=true-->
@@ -52,15 +54,19 @@ AlphaGo ~~~ DNN+蒙特卡洛搜索树
 
 <!-- slide -->
 ## 机器学习的分类
-监督学习：分类，回归
-无监督学习：聚类
-强化学习：奖惩机制
+- 监督学习：分类，回归
+- 无监督学习：聚类
+- 强化学习：奖惩机制
 
 <!-- slide vertical=true-->
-深度学习遍及监督学习，无监督学习，强化学习的方方面面。
-但最强的还是在于：
-### 监督学习
-分类和回归
+### 深度学习遍及机器学习的方方面面
+- 监督学习
+- 无监督学习
+- 强化学习
+### 但最强的还是在于
+**监督学习**
+- 分类
+- 回归
 
 <!-- slide -->
 ## 从y=wx+b谈起
@@ -69,11 +75,14 @@ $y=f(x)$
 二元一次方程 - 普通的线性关系
 $y=wx+b$
 
-- 给两组数据：
+<!-- slide vertical=true-->
+ 给两组数据：
+```
 10，2
 3，4
+```
 
-- 构成方程：
+构成方程：
 $2 = 10w+ b$
 $4 = 3w+b$
 
@@ -139,8 +148,9 @@ plt.show()
 ```
 <!-- slide vertical=true-->
 ## 传统的机器学习方法
-分类，回归，聚类
-scikit-learn
+use `scikit-learn`
+分类，回归，聚类，etc
+
 
 <!-- slide data-background-image="assets/sklearn.jpg" vertical=true -->
 
@@ -425,14 +435,19 @@ label = "自动编码器" ;
 
 ```
 <!-- slide vertical=true-->
-目标：保持输入和输出一致！！！
-脑子秀逗了？
+Why：
+<h3 style="color:red">保持输入和输出一致！！！</h3>
+
+<!-- slide vertical=true-->
+<h1 style="color:red">脑子秀逗了???</h3>
+
+<!-- slide vertical=true-->
+### 文青的解释
+
 
 <!-- slide vertical=true-->
 声律启蒙
 梅酸对李苦，青眼对白眉
-<!-- slide vertical=true-->
-
 ```dot
 digraph dui {
 rankdir=LR;
@@ -469,10 +484,12 @@ label = "文青的神经网络" ;
 <!-- slide vertical=true-->
 卷积：手电筒一块一块过
 ![手电筒](assets/cnn.jpg)
+每次看到手电筒照到的那  **一块地方**
 
 <!-- slide vertical=true-->
 池化：近视眼心更宽
 ![近视眼](assets/pool.jpg)
+n * n -> 1 * 1
 
 <!-- slide vertical=true-->
 ### CNN应用

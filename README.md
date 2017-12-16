@@ -1,3 +1,4 @@
+
 # reveal-show
 使用reveal.js展示各种ppt
 
@@ -12,3 +13,4 @@ https://rawgit.com/shd101wyy/markdown-preview-enhanced/master/docs/presentation-
 ## reveal-deeplearning
 深度学习入门，reveal版
 > powerd by `atom` `markdown-preview-enhanced` `reveal`
+> 听从老婆大人的建议，准备将此部分移植至powerpoint
