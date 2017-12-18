@@ -26,6 +26,7 @@ digraph d3 {
 预测未来->分类
 预测未来->回归
 预测未来->生成
+预测未来->"\.\.\."
 }
 ```
 
@@ -38,25 +39,38 @@ digraph d3 {
 - 越来越多的优化技巧
 
 #### 2. 能解决问题
-
-越来越多的Neural Network模型
-
+```dot
+digraph d3 {
+"更好的学习效果"
+"更强的网络模型"
+"更好的学习效果"->"更强的网络模型"
+"更强的网络模型"->"更好的学习效果"
+}
+```
 <!-- slide vertical=true-->
 ### AI？
 AI目前用途最广泛的分支，疯狂融合其他分支的内容
-AlphaGo ~~~ DNN+蒙特卡洛搜索树
-自动驾驶 ~~~ CNN
-聊天机器人 ~~~ RNN
-生成文本，图片，语音，视频 ~~~ GAN
-自动打游戏 ~~~ DQN
+- AlphaGo ~~~ DNN+蒙特卡洛搜索树
+- 自动驾驶 ~~~ CNN
+- 聊天机器人 ~~~ RNN
+- 生成文本，图片，语音，视频 ~~~ GAN
+- 自动打游戏 ~~~ DQN
 
+<!-- slide vertical=true-->
+### 我高数学的很一般啊？
+只需要<b style="color:red;font-size:200%">理解</b>两个概念
+- 高数 导数 `函数变化的趋势`
+- 线代 矩阵乘法 `维度的对应`
 
 
 <!-- slide -->
-## 机器学习的分类
+## 机器学习
 - 监督学习：分类，回归
 - 无监督学习：聚类
 - 强化学习：奖惩机制
+
+<!-- slide vertical=true-->
+## 分类，就是选择。
 
 <!-- slide vertical=true-->
 ### 深度学习遍及机器学习的方方面面
@@ -257,7 +271,10 @@ plt.show()
 ```
 <!-- slide vertical=true-->
 ### BP神经网络
-回头修正参数
+Back-propagation Neural Network
+- 相对于Forward Neural Network而言
+- 根据导数回头修正参数
+> 然而，Tensorflow 默默安排好了一切
 
 <!-- slide vertical=true-->
 ### 可是，我要识别一张图片，我该输入什么？
@@ -476,6 +493,7 @@ label = "文青的神经网络" ;
 同样，m1、m2 代表了全部的输入信息！！！
 也就是说自动缩减了特征的维度~
 带来了玩法的改变！！！
+> 人类进入了 End-to-End 时代
 
 <!-- slide -->
 ## CNN
@@ -529,8 +547,8 @@ n * n -> 1 * 1
 - 经典：全面严谨
 - Blog
 - Github
-- 论文
-- 比赛
+- 论文 [arxiv](https://arxiv.org/)
+- 比赛 [kaggle](https://www.kaggle.com/) [天池](https://tianchi.aliyun.com/)
  ```dot
  digraph graph1 {
      学习->思考->行动->学习
@@ -540,6 +558,7 @@ n * n -> 1 * 1
 ### 视频
 - [Tensorflow教程 by 莫烦](https://www.bilibili.com/video/av16001891/)
 - [网易云课堂的深度学习微专业 by 吴恩达](http://mooc.study.163.com/smartSpec/detail/1001319001.htm)
+- [神经网络机器学习课程2012 by Geoffrey Hinton ](https://www.bilibili.com/video/av9838961)
 
 <!-- slide vertical=true-->
 ### 书籍
