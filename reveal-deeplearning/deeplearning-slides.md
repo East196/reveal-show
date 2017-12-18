@@ -6,39 +6,64 @@ presentation:
   enableSpeakerNotes: true
 ---
 
-<!-- slide -->
-# 深度学习入坑指南
+<!-- slide data-background-image="assets/face.png"-->
+# 深度学习
+# 从入坑到放弃
 > East196
 
 [GitHub：http://github.com/east196](http://github.com/east196)
 
 <!-- slide -->
-## 深度学习
+## 深度学习简介
+
+<!-- slide vertical=true-->
 ### 是什么？
-机器学习的最前沿分支
+AI的最前沿分支
 深度学习 = 深度神经网络
 <!-- slide vertical=true-->
 ### 能做什么？
-预测未来
-```dot
-digraph d3 {
-预测未来
-预测未来->分类
-预测未来->回归
-预测未来->生成
-预测未来->"\.\.\."
-}
-```
+- 自动驾驶 ~~~ CNN
+- 聊天机器人，机器翻译 ~~~ RNN
+- 生成文本，图片，语音，视频 ~~~ GAN
+- AlphaGo，自动打游戏 ~~~ DQN
 
 <!-- slide vertical=true-->
-### Why？
-简单粗暴效果好！
-#### 1. 能Work
+### 机器学习学什么？
+- **监督学习**        
+手把手教学
+- **无监督学习**     
+丢你本书看，然而并不想理你
+- **强化学习**
+丢你本书看，请你做题，板子伺候
+
+<!-- slide vertical=true-->
+### 深度学习的强项
+**监督学习**
+- 分类
+- 回归
+<!-- slide vertical=true-->
+### 分类，就是选择。
+
+<!-- slide vertical=true-->
+### 为什么用深度学习而不是其他？
+### <b style="color:red;font-size:200%">简单粗暴效果好！</b>
+<!-- slide vertical=true-->
+#### 能Work
 - 越来越大的数据
 - 越来越快的电脑
 - 越来越多的优化技巧
 
-#### 2. 能解决问题
+<!-- slide vertical=true-->
+NN打油诗
+    - East196
+
+机器性能大提升，
+海量数据在产生。
+群策群力来贡献，
+神经网络大又深。
+
+<!-- slide vertical=true-->
+#### 效果好
 ```dot
 digraph d3 {
 "更好的学习效果"
@@ -47,44 +72,27 @@ digraph d3 {
 "更强的网络模型"->"更好的学习效果"
 }
 ```
-<!-- slide vertical=true-->
-### 大家都在聊AI，深度学习哪根葱？
-深度学习是AI目前应用最广泛的分支
-- 自动驾驶 ~~~ CNN
-- 聊天机器人，机器翻译 ~~~ RNN
-- 生成文本，图片，语音，视频 ~~~ GAN
-- AlphaGo，自动打游戏 ~~~ DQN
+先驱们的不断开拓优化
+CNN，RNN，GAN，DQN，CapsuleNet
 
 <!-- slide vertical=true-->
-### 我高数学的很一般啊？
-只需要<b style="color:red;font-size:200%">理解</b>两个概念
-- 高数 导数 `函数变化的趋势`
-- 线代 矩阵乘法 `维度的对应`
+### 看起来公式好难懂~~
+ 只需要<b style="color:red;font-size:200%">理解</b>两个概念
+ - 高数 导数 `函数变化的趋势`
+ - 线代 矩阵乘法 `维度的对应`
+
+
+
+
 
 
 <!-- slide -->
-## 机器学习
-- 监督学习：分类，回归
-- 无监督学习：聚类
-- 强化学习：奖惩机制
+## 初探神经网络
 
 <!-- slide vertical=true-->
-## 分类，就是选择。
-
-<!-- slide vertical=true-->
-### 深度学习遍及机器学习的方方面面
-- 监督学习
-- 无监督学习
-- 强化学习
-### 但最强的还是在于
-**监督学习**
-- 分类
-- 回归
-
-<!-- slide -->
-## 从y=wx+b谈起
+### 从y=wx+b谈起
 $y=f(x)$
-## 简单的函数
+### 最简单的函数
 二元一次方程 - 普通的线性关系
 $y=wx+b$
 
@@ -96,12 +104,14 @@ $y=wx+b$
 ```
 
 构成方程：
-$2 = 10w+ b$
-$4 = 3w+b$
+```math
+\begin{cases}
+2 = 10w+ b \\
+4 = 3w+b
+\end{cases}
+```
 
 怎么解？：）
-<!-- slide data-background-image="assets/sklearn.jpg" vertical=true -->
-
 
 <!-- slide vertical=true-->
 ```python {cmd=true matplotlib=true}
@@ -160,16 +170,20 @@ plt.legend()
 plt.show()
 ```
 <!-- slide vertical=true-->
-## 传统的机器学习方法
+## 机器学习
 use `scikit-learn`
-分类，回归，聚类，etc
-
+- 监督学习：分类，回归
+- 无监督学习：聚类
 
 <!-- slide data-background-image="assets/sklearn.jpg" vertical=true -->
 
+<!-- slide vertical=true-->
+- 基本回归：线性、决策树、SVM、KNN
+- 集成方法：随机森林、Adaboost、GradientBoosting、Bagging、ExtraTrees
 
 <!-- slide vertical=true-->
 ## 最简单的神经网络
+Neural Network
 ```dot
 digraph Ped_Lion_Share           {
 rankdir=LR;
@@ -290,23 +304,15 @@ Back-propagation Neural Network
 <!-- slide vertical=true-->
 NO！
 现在计算机跑这么快了，
-我要把 宽*高*RGBA 直接扔进去！！！
+我要把 宽\*高\*RGBA 直接扔进去！！！
 
 <!-- slide -->
 ## DNN
+Deep Neural Network
 更大更深的神经网络
-
-<!-- slide -->
-NN打油诗
-    - East196
-
-机器性能大提升，
-海量数据在产生。
-群策群力来贡献，
-神经网络大又深。
+use `tensorflow` `pytorch`
 
 <!-- slide vertical=true-->
-### 自动编码器
 ```dot
 digraph d3 {
 rankdir=LR;
@@ -451,7 +457,7 @@ label = "自动编码器" ;
 
 ```
 <!-- slide vertical=true-->
-Why：
+### 作用
 <h3 style="color:red">保持输入和输出一致！！！</h3>
 
 <!-- slide vertical=true-->
@@ -494,8 +500,11 @@ label = "文青的神经网络" ;
 带来了玩法的改变！！！
 > 人类进入了 End-to-End 时代
 
+
+
 <!-- slide -->
 ## CNN
+Convolutional Neural Network
 卷积神经网络
 ![CNN](assets/CNNArchitecture.jpg)
 <!-- slide vertical=true-->
@@ -516,12 +525,14 @@ n * n -> 1 * 1
 
 <!-- slide -->
 ## RNN
+Recurrent Neural Network
 循环神经网络
 ![RNN](assets/RNN-unrolled.png)
 原理：状态记忆
 <!-- slide vertical=true-->
-### LTSM
-![LTSM](assets/LSTM3-chain.png)
+### LSTM
+Long-Short Term Memory
+![LSTM](assets/LSTM3-chain.png)
 原理：三重门
 <!-- slide vertical=true-->
 ### RNN应用
@@ -533,15 +544,40 @@ n * n -> 1 * 1
 ![语音识别](assets/rnn2.jpg)
 
 <!-- slide -->
+## 前沿技术
+<!-- slide vertical=true-->
 ## GAN
+Generative Adversarial Network
+生成对抗网络
 ![GAN](assets/gan.png)
 <!-- slide vertical=true-->
 ### GAN应用
 #### DCGAN生成女朋友
+Deep Convolutional Generative Adversarial Network
 ![DCGAN生成女朋友](assets/girl.jpg)
 
+<!-- slide vertical=true-->
+## DRL
+Deep Reinforcement Learning
+<!-- slide vertical=true-->
+[DQN](https://arxiv.org/pdf/1312.5602.pdf)玩游戏
+![game](assets/atari.jpg)
+<!-- slide vertical=true-->
+ AlphaGo系列
+ ![alphago](assets/alphago.jpg)
+
+<!-- slide vertical=true-->
+## Capsule Net
+胶囊网络
+![capsule net](assets/capsule-net-cn.png)
+
 <!-- slide -->
-## 学习顺序
+## 怎么学？
+
+
+
+<!-- slide vertical=true-->
+### 可能的学习顺序
 - 入门：简单易懂
 - 经典：全面严谨
 - Blog
@@ -553,6 +589,9 @@ n * n -> 1 * 1
      学习->思考->行动->学习
 }
  ```
+
+
+
 <!-- slide vertical=true-->
 ### 视频
 - [Tensorflow教程 by 莫烦](https://www.bilibili.com/video/av16001891/)
@@ -573,10 +612,11 @@ n * n -> 1 * 1
 
 
 <!-- slide data-background-image="https://i.loli.net/2017/07/12/5965b7edd3a2a.jpeg" -->
- - <p style="color: #fff;">感谢Ian Goodfellow、Yoshua Bengio 和 Aaron Courville三巨头！</p> <!-- .element: class="fragment" data-fragment-index="3" -->
- - <p style="color: #fff;">感谢吴恩达怪大叔！</p> <!-- .element: class="fragment" data-fragment-index="2" -->
- - <p style="color: #fff;">感谢吴沫凡小哥哥！</p> <!-- .element: class="fragment" data-fragment-index="1" -->
+# Thanks
+ - ## <p style="color: #fff;">Geoffrey Hinton的开拓！</p> <!-- .element: class="fragment" data-fragment-index="3" -->
+ - ### <p style="color: #fff;">吴恩达怪蜀黍的布道！</p> <!-- .element: class="fragment" data-fragment-index="2" -->
+ - ### <p style="color: #fff;">吴沫凡小哥哥的小视频！</p> <!-- .element: class="fragment" data-fragment-index="1" -->
 
-<!-- slide data-background-image="assets/thankyou.jpg" data-transition="zoom" -->
+<!-- slide vertical=true data-background-image="assets/thankyou.jpg" data-transition="zoom" -->
 
 <!-- slide vertical=true data-background-image="深度学习入门.png"-->
