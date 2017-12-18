@@ -7,7 +7,7 @@ presentation:
 ---
 
 <!-- slide -->
-# 深度学习入门
+# 深度学习入坑指南
 > East196
 
 [GitHub：http://github.com/east196](http://github.com/east196)
@@ -48,13 +48,12 @@ digraph d3 {
 }
 ```
 <!-- slide vertical=true-->
-### AI？
-AI目前用途最广泛的分支，疯狂融合其他分支的内容
-- AlphaGo ~~~ DNN+蒙特卡洛搜索树
+### 大家都在聊AI，深度学习哪根葱？
+深度学习是AI目前应用最广泛的分支
 - 自动驾驶 ~~~ CNN
-- 聊天机器人 ~~~ RNN
+- 聊天机器人，机器翻译 ~~~ RNN
 - 生成文本，图片，语音，视频 ~~~ GAN
-- 自动打游戏 ~~~ DQN
+- AlphaGo，自动打游戏 ~~~ DQN
 
 <!-- slide vertical=true-->
 ### 我高数学的很一般啊？
