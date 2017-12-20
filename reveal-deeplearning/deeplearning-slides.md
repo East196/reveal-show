@@ -8,7 +8,7 @@ presentation:
 
 <!-- slide data-background-image="assets/face.png"-->
 # 深度学习
-# 从入坑到放弃
+# 入坑指北
 > East196
 
 [GitHub：http://github.com/east196](http://github.com/east196)
@@ -18,40 +18,79 @@ presentation:
 
 <!-- slide vertical=true-->
 ### 是什么？
-AI的最前沿分支
-深度学习 = 深度神经网络
-<!-- slide vertical=true-->
-### 能做什么？
-- 自动驾驶 ~~~ CNN
-- 聊天机器人，机器翻译 ~~~ RNN
-- 生成文本，图片，语音，视频 ~~~ GAN
-- AlphaGo，自动打游戏 ~~~ DQN
+- AI大爆发的导火索
+
+- 机器学习的最前沿分支
+
+- 深度学习 = 深度神经网络
+
+<!-- slide vertical=true -->
+![AI&机器学习&深度学习](assets/ai.jpg)
 
 <!-- slide vertical=true-->
-### 机器学习学什么？
+### 机器学习怎么学？
 - **监督学习**        
 手把手教学
+
 - **无监督学习**     
 丢你本书看，然而并不想理你
+
 - **强化学习**
 丢你本书看，请你做题，板子伺候
 
 <!-- slide vertical=true-->
 ### 深度学习的强项
+
 **监督学习**
+
 - 分类
+
 - 回归
 <!-- slide vertical=true-->
 ### 分类，就是选择。
+上哪个大学
+
+找谁做女友
+
+做什么工作
+
+玩什么游戏
+
+<b style="color:red;font-size:200%">全是分类</b>
 
 <!-- slide vertical=true-->
-### 为什么用深度学习而不是其他？
+### 应用
+- 图片识别，行为识别，自动驾驶
+- 聊天机器人，机器翻译
+- 生成文本，图片，语音，视频
+- AlphaGo，自动打星际2 
+
+<!-- slide vertical=true-->
+### 为什么用深度学习？
 ### <b style="color:red;font-size:200%">简单粗暴效果好！</b>
 <!-- slide vertical=true-->
-#### 能Work
-- 越来越大的数据
-- 越来越快的电脑
-- 越来越多的优化技巧
+#### 简单粗暴
+Input 扔进 NN 出Output
+![](assets/blackbox.jpg)
+
+
+<!-- slide vertical=true-->
+#### 效果好
+![](assets/scaledrive.png)
+
+
+<!-- slide vertical=true-->
+### 为什么深度学习这么强？
+<!-- slide vertical=true-->
+- **高性能**
+GPU，TPU，NPU
+
+- **大数据**
+互联网，物联网产生海量数据
+
+- **强算法**
+先驱们的不断开拓优化
+CNN，RNN，GAN，DQN，CapsuleNet
 
 <!-- slide vertical=true-->
 NN打油诗
@@ -59,49 +98,38 @@ NN打油诗
 
 机器性能大提升，
 海量数据在产生。
-群策群力来贡献，
-神经网络大又深。
-
-<!-- slide vertical=true-->
-#### 效果好
-```dot
-digraph d3 {
-"更好的学习效果"
-"更强的网络模型"
-"更好的学习效果"->"更强的网络模型"
-"更强的网络模型"->"更好的学习效果"
-}
-```
-先驱们的不断开拓优化
-CNN，RNN，GAN，DQN，CapsuleNet
+群策群力来优化，
+神经网络强大深。
 
 <!-- slide vertical=true-->
 ### 看起来公式好难懂~~
- 只需要<b style="color:red;font-size:200%">理解</b>两个概念
+ 只需要<b style="color:red;font-size:200%">理解</b>三个概念
  - 高数 导数 `函数变化的趋势`
  - 线代 矩阵乘法 `维度的对应`
-
-
-
-
-
+ - 概率 事件发生的几率 `可能性`
 
 <!-- slide -->
-## 初探神经网络
+## 从神经网络到深度学习
 
 <!-- slide vertical=true-->
-### 从y=wx+b谈起
-$y=f(x)$
+### 从 $y=wx+b$ 谈起
+
+
+<!-- slide vertical=true-->
 ### 最简单的函数
-二元一次方程 - 普通的线性关系
+$y=f(x)$
+
+> 线性关系
+
 $y=wx+b$
 
 <!-- slide vertical=true-->
  给两组数据：
-```
-10，2
-3，4
-```
+| x     | y     |
+| :------------- | :------------- |
+| 10       | 2       |
+| 3       | 4       |
+
 
 构成方程：
 ```math
@@ -144,7 +172,7 @@ plt.show()
 
 
 <!-- slide vertical=true-->
-然而，现实是：
+然而，现实世界是：
 ```python {cmd=true matplotlib=true}
 
 import numpy as np
@@ -196,8 +224,14 @@ label = "最简单的神经网络" ;
 }
 
 ```
-咦，效果一般啊？
-一定是打开的方式不对！
+
+
+<!-- slide vertical=true-->
+### 只有一个神经元
+![](assets/neuralunit.jpg)
+
+<!-- slide vertical=true-->
+## 神经网络怎么计算？
 
 <!-- slide vertical=true-->
 ## 权重Weight与偏置Biase
@@ -205,7 +239,7 @@ $ y = wx+b $
 面熟对不对？
 求解线性问题
 权重和偏置怎么设置？
-我也不知道，那就随机吧...
+我也不知道，那就按正态分布随机吧...
 
 <!-- slide vertical=true-->
 ## 激活函数
@@ -283,35 +317,123 @@ plt.legend()
 plt.show()  
 ```
 <!-- slide vertical=true-->
-### BP神经网络
+### 反向传播神经网络
 Back-propagation Neural Network
-- 相对于Forward Neural Network而言
-- 根据导数回头修正参数
+- 前馈神经网络
+- 优化器根据误差回头修正参数
 > 然而，Tensorflow 默默安排好了一切
 
 <!-- slide vertical=true-->
-### 可是，我要识别一张图片，我该输入什么？
-输入一般称之为特征
-特征要靠自己分析，然后选取
-比如我要识别车牌上的一个字
-
-画个九宫格，9个特征
-上中下，3个特征
-整图，1个特征
-
-9+3+1=13
+### 识别图片？
+![](assets/MINST.png)
 
 <!-- slide vertical=true-->
+### 输入 => 特征
+九宫格，9个特征
+上中下，3个特征
+整图，1个特征
+9+3+1=13
+
+
+<!-- slide vertical=true-->
+### 输入 == 特征
 NO！
 现在计算机跑这么快了，
 我要把 宽\*高\*RGBA 直接扔进去！！！
 
-<!-- slide -->
-## DNN
+<!-- slide vertical=true-->
+### DNN出场
 Deep Neural Network
 更大更深的神经网络
 use `tensorflow` `pytorch`
 
+<!-- slide -->
+## CNN
+Convolutional Neural Network
+卷积神经网络
+![CNN](assets/CNNArchitecture.jpg)
+<!-- slide vertical=true-->
+卷积：手电筒一块一块过
+![手电筒](assets/cnn.jpg)
+每次看到手电筒照到的那  **一块地方**
+
+<!-- slide vertical=true-->
+池化：近视眼心更宽
+![近视眼](assets/pool.jpg)
+n * n -> 1 * 1
+
+<!-- slide vertical=true-->
+### CNN应用
+![手写识别](assets/MINST.png)
+![猫狗分类](assets/catdog.jpg)
+<!-- slide vertical=true-->
+![发现小行星](assets/star.jpeg)
+
+
+<!-- slide -->
+## RNN
+Recurrent Neural Network
+循环神经网络
+![RNN](assets/RNN-unrolled.png)
+原理：状态记忆
+
+<!-- slide vertical=true-->
+### LSTM
+Long-Short Term Memory
+![LSTM](assets/LSTM3-chain.png)
+原理：三重门
+<!-- slide vertical=true-->
+### RNN应用
+#### 机器翻译
+![机器翻译](assets/rnn1.png)
+
+<!-- slide vertical=true-->
+####  语音识别
+![语音识别](assets/rnn2.jpg)
+
+<!-- slide vertical=true-->
+####  行为识别
+![行为识别](assets/attention.jpg)
+
+<!-- slide -->
+## 前沿技术
+<!-- slide vertical=true-->
+## GAN
+Generative Adversarial Network
+生成对抗网络
+![GAN](assets/gan.png)
+<!-- slide vertical=true-->
+### GAN应用
+<!-- slide vertical=true-->
+#### DCGAN生成女朋友
+Deep Convolutional Generative Adversarial Network
+![DCGAN生成女朋友](assets/girl.jpg)
+
+
+
+<!-- slide vertical=true-->
+#### 神奇女侠下海
+![](assets/sqnx.gif)
+
+<!-- slide vertical=true-->
+#### 观海背锅
+![](assets/guanhai.jpeg)
+
+<!-- slide vertical=true-->
+## DRL
+Deep Reinforcement Learning
+<!-- slide vertical=true-->
+[DQN](https://arxiv.org/pdf/1312.5602.pdf)玩游戏
+![game](assets/atari.jpg)
+<!-- slide vertical=true-->
+![](assets/StarCraft_02.jpg)
+
+<!-- slide vertical=true-->
+ AlphaGo系列
+ ![alphago](assets/alphago.jpg)
+
+<!-- slide vertical=true-->
+## Autoencoder
 <!-- slide vertical=true-->
 ```dot
 digraph d3 {
@@ -498,81 +620,15 @@ label = "文青的神经网络" ;
 同样，m1、m2 代表了全部的输入信息！！！
 也就是说自动缩减了特征的维度~
 带来了玩法的改变！！！
-> 人类进入了 End-to-End 时代
-
-
-
-<!-- slide -->
-## CNN
-Convolutional Neural Network
-卷积神经网络
-![CNN](assets/CNNArchitecture.jpg)
-<!-- slide vertical=true-->
-卷积：手电筒一块一块过
-![手电筒](assets/cnn.jpg)
-每次看到手电筒照到的那  **一块地方**
-
-<!-- slide vertical=true-->
-池化：近视眼心更宽
-![近视眼](assets/pool.jpg)
-n * n -> 1 * 1
-
-<!-- slide vertical=true-->
-### CNN应用
-![手写识别](assets/MINST.png)
-![猫狗分类](assets/catdog.jpg)
-
-
-<!-- slide -->
-## RNN
-Recurrent Neural Network
-循环神经网络
-![RNN](assets/RNN-unrolled.png)
-原理：状态记忆
-<!-- slide vertical=true-->
-### LSTM
-Long-Short Term Memory
-![LSTM](assets/LSTM3-chain.png)
-原理：三重门
-<!-- slide vertical=true-->
-### RNN应用
-#### 机器翻译
-![机器翻译](assets/rnn1.png)
-
-<!-- slide vertical=true-->
-####  语音识别
-![语音识别](assets/rnn2.jpg)
-
-<!-- slide -->
-## 前沿技术
-<!-- slide vertical=true-->
-## GAN
-Generative Adversarial Network
-生成对抗网络
-![GAN](assets/gan.png)
-<!-- slide vertical=true-->
-### GAN应用
-#### DCGAN生成女朋友
-Deep Convolutional Generative Adversarial Network
-![DCGAN生成女朋友](assets/girl.jpg)
-
-<!-- slide vertical=true-->
-## DRL
-Deep Reinforcement Learning
-<!-- slide vertical=true-->
-[DQN](https://arxiv.org/pdf/1312.5602.pdf)玩游戏
-![game](assets/atari.jpg)
-<!-- slide vertical=true-->
- AlphaGo系列
- ![alphago](assets/alphago.jpg)
 
 <!-- slide vertical=true-->
 ## Capsule Net
 胶囊网络
+<!-- slide vertical=true-->
 ![capsule net](assets/capsule-net-cn.png)
 
 <!-- slide -->
-## 怎么学？
+## Tips
 
 
 
@@ -600,12 +656,15 @@ Deep Reinforcement Learning
 
 <!-- slide vertical=true-->
 ### 书籍
+<!-- slide vertical=true-->
 #### 实战类
 没错，随便买，反正你会去Github上下代码的~~~
+<!-- slide vertical=true-->
 #### 专业类
 - [《白话深度学习与Tensorflow》](https://item.jd.com/12228460.html) by 高扬、卫峥
-- [《深度学习》](https://item.jd.com/12128543.html) by Ian Goodfellow、Yoshua Bengio 和 Aaron Courville
+- [《深度学习》](https://item.jd.com/12128543.html) by Ian Goodfellow、Yoshua Bengio 、Aaron Courville
 [电子版](https://github.com/exacity/deeplearningbook-chinese/releases/download/v0.5-beta/dlbook_cn_v0.5-beta.pdf)
+<!-- slide vertical=true-->
 
 #### 科普类
 - [《终极算法》](https://item.jd.com/12079958.html) by Pedro Domingos
@@ -613,10 +672,10 @@ Deep Reinforcement Learning
 
 <!-- slide data-background-image="https://i.loli.net/2017/07/12/5965b7edd3a2a.jpeg" -->
 # Thanks
- - ## <p style="color: #fff;">Geoffrey Hinton的开拓！</p> <!-- .element: class="fragment" data-fragment-index="3" -->
+ - ## <p style="color: #fff;">Hinton的坚持开拓！</p> <!-- .element: class="fragment" data-fragment-index="3" -->
  - ### <p style="color: #fff;">吴恩达怪蜀黍的布道！</p> <!-- .element: class="fragment" data-fragment-index="2" -->
  - ### <p style="color: #fff;">吴沫凡小哥哥的小视频！</p> <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <!-- slide vertical=true data-background-image="assets/thankyou.jpg" data-transition="zoom" -->
 
-<!-- slide vertical=true data-background-image="深度学习入门.png"-->
+<!-- slide vertical=true data-background-image="assets/xmind.png"-->
