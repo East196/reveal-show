@@ -63,7 +63,7 @@ presentation:
 - 图片识别，行为识别，自动驾驶
 - 聊天机器人，机器翻译
 - 生成文本，图片，语音，视频
-- AlphaGo，自动打星际2 
+- AlphaGo，自动打星际2
 
 <!-- slide vertical=true-->
 ### 为什么用深度学习？
@@ -422,6 +422,10 @@ Deep Convolutional Generative Adversarial Network
 <!-- slide vertical=true-->
 ## DRL
 Deep Reinforcement Learning
+
+<!-- slide vertical=true-->
+![RL](assets/rl.jpg)
+
 <!-- slide vertical=true-->
 [DQN](https://arxiv.org/pdf/1312.5602.pdf)玩游戏
 ![game](assets/atari.jpg)
